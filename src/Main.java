@@ -2,9 +2,11 @@ public class Main {
     public static void main(String[] args) {
 
         int []  numbers  = {1,2,3,4,5,6};
+        int [][]  nums  = {{1,2,3},{4,5}};
 
-       sumofarray(numbers);
-       donothing(numbers);
+        System.out.println(sumofarray(numbers));
+        System.out.println(donothing(numbers));
+        System.out.println(sumof2darr(nums));
 
 
     }
@@ -20,6 +22,7 @@ public class Main {
         return initial;  //o(1)
 
         //Total time taken  = o(1) + o(1) + o(1)  + n * o(1)  + o(1)  =  o(1) + n * o(1)
+        // o(n)  linear time
 
     }
 
@@ -29,6 +32,23 @@ public class Main {
         return initial;  //o(1)
 
        // Total time taken  T = o(1) + o(1)  whis is equal to 0(1) {constant time}
+   }
+
+
+   public static int sumof2darr (int [][] array){
+
+        int initial  = 0; // o(1)
+
+        for (int i = 0;i<array.length;i++){   //o(1)
+            for (int j =0; j<array[i].length;j++){ // o(1)
+                initial += array[i][j]; // o(1)
+            }
+        }
+        return initial; //o(1)
+
+       //Time taken  = o(1) + n ^ 2 * o(1) + o(1)
+       //o(1)  + n ^ 2 * o(1)
+       // o(n^2) {quadratice time}
    }
 
 }

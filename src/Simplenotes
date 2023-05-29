@@ -27,8 +27,30 @@ TIme complexity  - amount of time taken by an algorithm
 
      -> constant time o(1)  - T remains constant regardles of increase in n
 
+       public static int donothing(int [] numbers){
+               int initial  = 0;  //o(1)
+
+               return initial;  //o(1)
+
+              // Total time taken  T = o(1) + o(1)  whis is equal to 0(1) {constant time}
+          }
 
      -> quadratic time o(n power 2) - time increases like a quadratic function
 
+         public static int sumof2darr (int [][] array){
+
+                 int initial  = 0; // o(1)
+
+                 for (int i = 0;i<array.length;i++){   //o(1)
+                     for (int j =0; j<array[i].length;j++){ // o(1)
+                         initial += array[i][j]; // o(1)
+                     }
+                 }
+                 return initial; //o(1)
+
+                //Time taken  = o(1) + n ^ 2 * o(1) + o(1)
+                //o(1)  + n ^ 2 * o(1)
+                // o(n^2) {quadratice time}
+            }
 
 Space complexity - amount of memory taken by an algorithm
