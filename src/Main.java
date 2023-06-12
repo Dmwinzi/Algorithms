@@ -3,11 +3,24 @@ public class Main {
 
         int []  numbers  = {1,2,3,4,5,6};
         int [][]  nums  = {{1,2,3},{4,5}};
+        int [] [] num2d  = new int[3][4];
 
         System.out.println(sumofarray(numbers));
         System.out.println(donothing(numbers));
         System.out.println(sumof2darr(nums));
 
+        //Arrays Data structure
+        Arrays  arr  = new Arrays();
+
+        arr.insert1Darray(numbers);
+        arr.insert2Darray(num2d);
+        var indexval = arr.searcharray(numbers,4);
+
+        if (indexval == -1){
+            System.out.println("Key not found");
+        } else {
+            System.out.println("Key found at index  " +indexval);
+        }
 
     }
 
@@ -50,5 +63,7 @@ public class Main {
        //o(1)  + n ^ 2 * o(1)
        // o(n^2) {quadratice time}
    }
+
+
 
 }
